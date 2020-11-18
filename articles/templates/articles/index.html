@@ -1,7 +1,9 @@
+{% load sitetree %}
 {% include 'base.html' %}
 {% block content %}
     <div class="container">
         <div class="card shadow-sm mt-200">
+        {% sitetree_breadcrumbs from "mainMenu" template "sitetree/breadcrumbs_bootstrap4.html" %}
             {% for i in articles %}
                 <div>
                     <a href="{{ i.get_absolute_url }}">{{ i.title }} {{ i.anons }}</a>
