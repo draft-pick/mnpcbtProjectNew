@@ -1,0 +1,8 @@
+{% include 'base.html' %}
+{% block content %}
+        {% for i in articles %}
+        <div>
+            <a href="{{ i.get_absolute_url }}">{{ i.title }} {{ i.anons }}</a>
+        </div>
+    {% endfor %}
+{% endblock %}
