@@ -1,2 +1,36 @@
 {% load sitetree %}
 {% include 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="mt-200 p-3">
+                {% sitetree_breadcrumbs from "mainMenu" template "sitetree/breadcrumbs_bootstrap4.html" %}
+                <div class="row">
+                 {% for i in branches %}
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                          <!-- Card image -->
+                            {% for j in image_title %}
+                                {% if j.keyBranches == 1 %}
+                                    <img class="card-img-top" src="{{ j.image.url }}" alt="">
+                                {% endif %}
+                            {% endfor %}
+                            <!-- Card content -->
+                          <div class="card-body">
+                            <!-- Title -->
+                              <div>
+                                  <h4 class="card-title">{{ i.name }}</h4>
+                              </div>
+                            <!-- Text -->
+                            <p class="card-text">{{ i.address }}</p>
+                            <p class="card-text">{{ i.phones }}</p>
+                            <p class="card-text">{{ i.email }}</p>
+                            <!-- Button -->
+                            <a href="{{ i.get_absolute_url }}" class="btn btn-primary">Открыть</a>
+                          </div>
+                        </div>
+                    </div>
+                 {% endfor %}
+                </div>
+        </div>
+    </div>
+{% endblock %}

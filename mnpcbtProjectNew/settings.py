@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'sitetree',
     'main.apps.MainConfig',
     'news.apps.NewsConfig',
-    'articles.apps.ArticlesConfig'
+    'articles.apps.ArticlesConfig',
+    'structure.apps.StructureConfig',
 ]
 
 MIDDLEWARE = [
