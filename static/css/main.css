@@ -19,3 +19,12 @@ body {
     line-height: 1.5;
     border-radius: .3rem;
 }
+.left-mm {
+    background-color: rgba(0,0,0,.4);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    border-radius: 10px;
+    font-size: 20px;
+}
+.left-mm a {
+    color: #fff !important;
+}
