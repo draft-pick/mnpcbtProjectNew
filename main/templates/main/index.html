@@ -137,3 +137,30 @@
         </div>
     </div>
 </div>
+<div class="text-center"><h2>Наши новости</h2></div>
+<div class="row px-3 px-lg-5">
+        {% for i in news %}
+             <div class="col-12 col-lg-3 mb-4">
+                <div class="card testimonial-card">
+                  <div class="card-up aqua-gradient lighten-1"></div>
+                      <div class="avatar mx-auto white">
+                          {% for j in image %}
+                            {% if j.product_id == i.id %}
+                                <img alt="" src="{{ j.image.url }}" class="img-fluid">
+                            {% else %}
+                                <img alt="" src="/media/logo-main.png" class="img-fluid">
+                            {% endif %}
+                          {% endfor %}
+                      </div>
+                  <div class="card-body">
+                    <!-- Name -->
+                    <h4 class="card-title">{{ i.title }}</h4>
+                    <hr>
+                    <p><i class="fas fa-quote-left"></i> {{ i.anons }} <i class="fas fa-quote-right"></i></p>
+                      <button type="button" class="btn btn-danger btn-rounded">{{ i.created_at }}</button>
+                  </div>
+                </div>
+             </div>
+        {% endfor %}
+     </div>
+<div class="text-center"><h2>Наши филиалы</h2></div>

@@ -32,3 +32,10 @@ body {
 .navbar .navbar-brand img {
     height: auto !important;
 }
+.testimonial-card .avatar {
+    width: 250px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-radius: 0;
+}
