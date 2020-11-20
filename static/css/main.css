@@ -1,6 +1,9 @@
 body {
     font-family: 'Montserrat Alternates', sans-serif !important;
 }
+a {
+    color: #2bbbad;
+}
 .mt--100 {
     margin-top: -150px;
 }
@@ -38,4 +41,8 @@ body {
     overflow: hidden;
     border: 10px solid #fff;
     border-radius: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "|";
 }
