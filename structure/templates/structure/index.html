@@ -1,9 +1,5 @@
-{% load sitetree %}
-{% include 'base.html' %}
-{% block content %}
-    <div class="container">
-        <div class="mt-200 p-3">
-                {% sitetree_breadcrumbs from "mainMenu" template "sitetree/breadcrumbs_bootstrap4.html" %}
+{% extends 'inc/_containerPage.html' %}
+    {% block contentPage %}
                 <div class="row">
                  {% for i in branches %}
                     <div class="col-12 col-md-4">
@@ -31,6 +27,4 @@
                     </div>
                  {% endfor %}
                 </div>
-        </div>
-    </div>
-{% endblock %}
+    {% endblock %}

@@ -5,7 +5,7 @@ body {
     margin-top: -150px;
 }
 .mt-200 {
-    margin-top: 200px;
+    margin-top: 15%;
 }
 .z-index-norm {
     z-index: 9;
@@ -27,4 +27,8 @@ body {
 }
 .left-mm a {
     color: #fff !important;
+}
+
+.navbar .navbar-brand img {
+    height: auto !important;
 }

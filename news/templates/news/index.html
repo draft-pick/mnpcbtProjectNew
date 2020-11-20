@@ -1,8 +1,42 @@
-{% include 'base.html' %}
-{% block content %}
-    {% for i in news %}
-        <div>
-            <a href="{{ i.get_absolute_url }}">{{ i.title }} {{ i.anons }}</a>
-        </div>
-    {% endfor %}
+{% extends 'inc/_containerPage.html' %}
+ {% block contentPage %}
+{% for i in news %}
+     <div class="col-lg-4 col-md-12 mb-4">
+            <!-- Card Wider -->
+            <div class="card card-cascade wider">
+
+              <!-- Card image -->
+              <div class="view view-cascade overlay">
+               {% for j in image %}
+                    {% if j.product_id == i.id %}
+                        <img alt="" src="{{ j.image.url }}" class="rounded-lg">
+                    {% endif %}
+                {% endfor %}
+              </div>
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center pb-0">
+
+                <!-- Title -->
+                <h4 class="card-title"><strong>{{ i.title }}</strong></h4>
+                <!-- Text -->
+                <p class="card-text">{{ i.anons }}</p>
+
+                <!-- Linkedin -->
+                <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+                <!-- Twitter -->
+                <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+                <!-- Dribbble -->
+                <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Card footer -->
+                <div class="card-footer text-muted text-center mt-4">
+                  {{ i.created_at }}
+                </div>
+
+              </div>
+
+            </div>
+     </div>
+{% endfor %}
 {% endblock %}

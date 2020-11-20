@@ -20,3 +20,12 @@ class News(models.Model):
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
         ordering = ['-created_at']
+
+
+class GalleryNews(models.Model):
+    image = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Фото', blank=True)
+    product = models.ForeignKey(News, on_delete=models.CASCADE, related_name='images')
+    in_the_title = models.BooleanField(default=False, verbose_name='Заголовок')
+
+
+
