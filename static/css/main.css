@@ -36,7 +36,7 @@ a {
     height: auto !important;
 }
 .testimonial-card .avatar {
-    width: 250px;
+    width: 180px;
     margin-top: -60px;
     overflow: hidden;
     border: 10px solid #fff;
@@ -45,4 +45,11 @@ a {
 
 .breadcrumb-item + .breadcrumb-item::before {
     content: "|";
+}
+
+.news-area {
+    background-color: lightcyan;
+}
+.news-area .btn-more{
+    font-size: 50px;
 }
