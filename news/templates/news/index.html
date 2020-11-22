@@ -46,8 +46,9 @@
                 <div class="card testimonial-card">
                   <div class="card-up aqua-gradient lighten-1"></div>
                       <div class="avatar mx-auto white">
-                          {% for j in image %}
-                            {% if j.product_id == i.id %}
+                          {% for j in image|slice:":1" %}
+                            {% if i.id == j.product_id %}
+                                <h3>номер id - {{ i.id }} {{ j.product_id }}</h3>
                                 <img alt="" src="{{ j.image.url }}" class="img-fluid">
                             {% else %}
                                 <img alt="" src="/media/logo-main.png" class="img-fluid">

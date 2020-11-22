@@ -22,6 +22,8 @@ a {
     line-height: 1.5;
     border-radius: .3rem;
 }
+
+/*MAIN MENU AREA*/
 .left-mm {
     background-color: rgba(0,0,0,.4);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
@@ -31,7 +33,17 @@ a {
 .left-mm a {
     color: #fff !important;
 }
-
+@media screen and (max-width: 1500px) {
+    .mm-area h2 {
+        font-size: 22px;
+    }
+    .mm-area .nav-link {
+        padding: .2rem 1rem;
+    }
+    .left-mm {
+        font-size: 16px;
+    }
+}
 .navbar .navbar-brand img {
     height: auto !important;
 }

@@ -18,13 +18,13 @@
           <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
 
             <!-- Content -->
-              <div class="row">
-                  <div class="col-4">
+              <div class="row mm-area">
+                  <div class="col-12 col-lg-4">
                       <div class="left-mm p-3">
                             {% sitetree_menu from "leftMenu" include "trunk" template "sitetree/menu_bootstrap4.html"%}
                       </div>
                   </div>
-                  <div class="col-8 align-self-center">
+                  <div class="col-8 d-none d-lg-block align-self-center">
                     <div class="white-text mx-5 wow fadeIn">
                         <h2 class="text-right">Государственное бюджетное учреждение здравоохранения города Москвы "Московский научно-практический центр борьбы с туберкулезом
                             Департамента здравоохранения города Москвы"</h2>
@@ -137,7 +137,49 @@
         </div>
     </div>
 </div>
+<div class="text-center"><h2>Наши филиалы</h2></div>
+    <div class="owl-carousel px-3" id="carouselBranches">
+        {% for i in branches %}
+             <div class="item">
+                    <!-- Card Wider -->
+                    <div class="card card-cascade wider">
 
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                       {% for j in image_branches %}
+                            {% if j.keyBranches_id == i.id %}
+                                <img alt="" src="{{ j.image.url }}" class="img-fluid">
+                            {% endif %}
+                        {% endfor %}
+                      </div>
+
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center pb-0">
+
+                        <!-- Title -->
+                        <h4 class="card-title"><strong>{{ i.name }}</strong></h4>
+                        <!-- Text -->
+                        <p class="card-text">{{ i.address }}</p>
+                        <p class="card-text">{{ i.phones }}</p>
+                        <p class="card-text">{{ i.email }}</p>
+                        <!-- Linkedin -->
+                        <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- Twitter -->
+                        <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+                        <!-- Dribbble -->
+                        <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+
+                        <!-- Card footer -->
+                        <div class="card-footer text-muted text-center mt-4">
+                          {{ i.created_at }}
+                        </div>
+
+                      </div>
+
+                    </div>
+             </div>
+        {% endfor %}
+    </div>
 <div class="news-area">
     <div class="text-center"><h2>Наши новости</h2></div>
     <div class="row px-3 px-lg-5">
@@ -165,48 +207,4 @@
             <i class="fas fa-share btn-more"></i>
     </div>
     </div>
-</div>
-<div class="text-center"><h2>Наши филиалы</h2></div>
-<div class="row">
-{% for i in branches %}
-     <div class="col-lg-4 col-md-12 mb-4">
-            <!-- Card Wider -->
-            <div class="card card-cascade wider">
-
-              <!-- Card image -->
-              <div class="view view-cascade overlay">
-               {% for j in image_branches %}
-                    {% if j.keyBranches_id == i.id %}
-                        <img alt="" src="{{ j.image.url }}" class="img-fluid">
-                    {% endif %}
-                {% endfor %}
-              </div>
-
-              <!-- Card content -->
-              <div class="card-body card-body-cascade text-center pb-0">
-
-                <!-- Title -->
-                <h4 class="card-title"><strong>{{ i.name }}</strong></h4>
-                <!-- Text -->
-                <p class="card-text">{{ i.address }}</p>
-                <p class="card-text">{{ i.phones }}</p>
-                <p class="card-text">{{ i.email }}</p>
-                <!-- Linkedin -->
-                <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
-                <!-- Twitter -->
-                <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
-                <!-- Dribbble -->
-                <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
-
-                <!-- Card footer -->
-                <div class="card-footer text-muted text-center mt-4">
-                  {{ i.created_at }}
-                </div>
-
-              </div>
-
-            </div>
-     </div>
-
-{% endfor %}
 </div>
