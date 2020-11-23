@@ -1,6 +1,15 @@
-{% include 'base.html' %}
-{% block content %}
-    {{ news_item.title }}
+{% extends 'inc/_containerPage.html' %}
+ {% block contentPage %}
+     {% if news_item.image_title %}
+        <img src="{{ news_item.image_title.url }}" alt="">
+     {% endif %}
     {{ news_item.content }}
-    {{ news_item.created_at }}
+    {{ news_item.created_at|date:"d E Y" }}
+
+     <hr>
+     {% for images in images_gallery %}
+         {% if images.image %}
+         <img src="{{ images.image.url }}" alt="">
+         {% endif %}
+     {% endfor %}
 {% endblock %}

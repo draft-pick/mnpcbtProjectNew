@@ -9,6 +9,7 @@ class News(models.Model):
     content = RichTextUploadingField(blank=True, verbose_name='Контент')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовать')
+    image_title = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Фото', blank=True)
 
     def get_absolute_url(self):
         return reverse('view_news', kwargs={"news_id": self.pk})
@@ -25,7 +26,7 @@ class News(models.Model):
 class GalleryNews(models.Model):
     image = models.ImageField(upload_to='photos/%Y/%m/%d/', verbose_name='Фото', blank=True)
     product = models.ForeignKey(News, on_delete=models.CASCADE, related_name='images')
-    in_the_title = models.BooleanField(default=False, verbose_name='Заголовок')
+
 
 
 
