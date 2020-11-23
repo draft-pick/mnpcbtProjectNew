@@ -6,11 +6,9 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 def index(request):
     branches = Branches.objects.all()
     paginator = Paginator(branches, 10)
-    image_title = GalleryBranches.objects.filter(in_the_cont=1)
     context = {
         'branches': branches,
         'paginator': paginator,
-        'image_title': image_title,
         'title': 'Структура Центра',
     }
     return render(request, 'structure/index.html', context=context)

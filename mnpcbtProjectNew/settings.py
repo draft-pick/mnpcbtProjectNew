@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'articles.apps.ArticlesConfig',
     'structure.apps.StructureConfig',
+    'reviews.apps.ReviewsConfig',
 ]
 
 MIDDLEWARE = [

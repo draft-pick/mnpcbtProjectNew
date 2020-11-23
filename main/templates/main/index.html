@@ -146,11 +146,11 @@
 
                       <!-- Card image -->
                       <div class="view view-cascade overlay">
-                       {% for j in image_branches %}
-                            {% if j.keyBranches_id == i.id %}
-                                <img alt="" src="{{ j.image.url }}" class="img-fluid">
-                            {% endif %}
-                        {% endfor %}
+                       {% if i.image_title %}
+                           <img src="{{ i.image_title.url }}" alt="">
+                       {% else %}
+                           <img src="/media/no_image.jpg" alt="">
+                       {% endif %}
                       </div>
 
                       <!-- Card content -->
@@ -184,7 +184,7 @@
     <div class="text-center"><h2>Наши новости</h2></div>
     <div class="row px-3 px-lg-5">
             {% for i in news %}
-                 <div class="col-12 col-lg-2 mb-4">
+                 <div class="col-12 col-lg-3 mb-4">
                     <div class="card testimonial-card">
                       <div class="card-up aqua-gradient lighten-1"></div>
                           <div class="avatar mx-auto white">
@@ -196,15 +196,38 @@
                           </div>
                       <div class="card-body">
                         <!-- Name -->
-                        <h4 class="card-title">{{ i.title }}</h4>
+                        <h5 class="card-title">{{ i.title }}</h5>
                         <hr>
                           <button type="button" class="btn btn-danger btn-rounded">{{ i.created_at|date:"d E Y" }}</button>
                       </div>
                     </div>
                  </div>
             {% endfor %}
-    <div class="col-12 col-lg-2 mb-4 d-flex justify-content-center align-items-center">
-        <a href="{% url 'news' %}"><i class="fas fa-share btn-more"></i></a>
+    <div class="col-12 mb-4 text-center">
+        <a href="{% url 'news' %}"><h4><i class="fas fa-long-arrow-alt-right"></i>
+                                    ...БОЛЬШЕ НОВОСТЕЙ...
+                                    <i class="fas fa-long-arrow-alt-left"></i></h4>
+        </a>
     </div>
+    </div>
+</div>
+<div class="reviews-area">
+<div class="text-center"><h2>Отзывы о нашей работе</h2></div>
+    <div class="owl-carousel px-3" id="carouselReviews">
+        {% for r in reviews %}
+             <div class="item">
+                    <!-- Card -->
+                        <div class="card card-cascade wider">
+                          <div class="view view-cascade gradient-card-header peach-gradient">
+                            <h2 class="card-header-title mb-3">{{ r.name }}</h2>
+                            <p class="mb-0"><i class="fas fa-calendar mr-2"></i>{{ r.date }}</p>
+                          </div>
+                          <div class="card-body card-body-cascade text-center story">
+                            <p class="card-text">{{ r.content }}</p>
+                          </div>
+                        </div>
+                        <!-- Card -->
+             </div>
+        {% endfor %}
     </div>
 </div>

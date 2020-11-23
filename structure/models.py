@@ -9,6 +9,7 @@ class Branches(models.Model):
     phones = RichTextUploadingField(verbose_name='Телефоны')
     email = models.EmailField(verbose_name='E-mail')
     content = RichTextUploadingField(blank=True, verbose_name='Контент')
+    image_title = models.ImageField(upload_to='branches/', verbose_name='Фото заголовка', blank=True)
 
     def get_absolute_url(self):
         return reverse('view_branch', kwargs={"branch_id": self.pk})
@@ -24,7 +25,6 @@ class Branches(models.Model):
 class GalleryBranches(models.Model):
     image = models.ImageField(upload_to='branches/', verbose_name='Фото/Схема проезда', blank=True)
     keyBranches = models.ForeignKey(Branches, on_delete=models.CASCADE, related_name='images')
-    in_the_cont = models.BooleanField(default=False, verbose_name='В основной контент')
     location_map = models.BooleanField(default=False, verbose_name='Схема проезда')
 
 
