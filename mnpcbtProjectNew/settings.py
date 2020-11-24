@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'articles.apps.ArticlesConfig',
     'structure.apps.StructureConfig',
     'reviews.apps.ReviewsConfig',
+    'implink.apps.ImplinkConfig',
 ]
 
 MIDDLEWARE = [

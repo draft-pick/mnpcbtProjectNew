@@ -103,15 +103,15 @@
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-mobile-alt pink-text btn-xl"></i>
             <hr>
-            Справочная служба:
+            <h4>Справочная служба:</h4>
             8-499-268-25-00
-            Телефон горячей линии:
+            <h4>Телефон горячей линии:</h4>
             8-925-231-99-72
-            Приемная Директора:
+            <h4>Приемная Директора:</h4>
             8-499-268-00-05
-            Отдел делопроизводства:
+            <h4>Отдел делопроизводства:</h4>
             8-499-785-25-14
-            Факс:
+            <h4>Факс:</h4>
             8-499-785-20-82
         </div>
     </div>
@@ -119,25 +119,28 @@
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-map-pin pink-text btn-xl"></i>
             <hr>
-            Адрес
+            <h4>Адрес:</h4>
+            г. Москва, ул. Стромынка, д. 10
         </div>
     </div>
    <div class="col-12 col-md-3 z-index-norm">
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-clock pink-text btn-xl"></i>
             <hr>
-            Режим работы
+            <h4>Режим работы:</h4>
+            Круглосуточно (Стационар)
         </div>
     </div>
    <div class="col-12 col-md-3 z-index-norm">
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-exclamation pink-text btn-xl"></i>
             <hr>
-            Режим работы
+            <h4>Контактный телефон горячей линии психологической помощи:</h4>
+            +7(999)353-79-80
         </div>
     </div>
 </div>
-<div class="text-center"><h2>Наши филиалы</h2></div>
+<div class="text-center font-weight-bold"><h1>Наши филиалы</h1></div>
     <div class="owl-carousel px-3" id="carouselBranches">
         {% for i in branches %}
              <div class="item">
@@ -180,13 +183,13 @@
              </div>
         {% endfor %}
     </div>
-<div class="news-area">
+<div class="container-fluid news-area">
     <div class="text-center"><h2>Наши новости</h2></div>
-    <div class="row px-3 px-lg-5">
+    <div class="row px-lg-5">
             {% for i in news %}
                  <div class="col-12 col-lg-3 mb-4">
                     <div class="card testimonial-card">
-                      <div class="card-up aqua-gradient lighten-1"></div>
+                      <div class="card-up winter-neva-gradient lighten-1"></div>
                           <div class="avatar mx-auto white">
                               {% if i.image_title %}
                                   <img src="{{ i.image_title.url }}" alt="">
@@ -213,12 +216,12 @@
 </div>
 <div class="reviews-area">
 <div class="text-center"><h2>Отзывы о нашей работе</h2></div>
-    <div class="owl-carousel px-3" id="carouselReviews">
+    <div class="owl-carousel px-lg-5" id="carouselReviews">
         {% for r in reviews %}
              <div class="item">
                     <!-- Card -->
                         <div class="card card-cascade wider">
-                          <div class="view view-cascade gradient-card-header peach-gradient">
+                          <div class="view view-cascade gradient-card-header tempting-azure-gradient">
                             <h2 class="card-header-title mb-3">{{ r.name }}</h2>
                             <p class="mb-0"><i class="fas fa-calendar mr-2"></i>{{ r.date }}</p>
                           </div>
@@ -231,3 +234,32 @@
         {% endfor %}
     </div>
 </div>
+<div class="implink-area">
+    <div class="container">
+        <div class="text-center"><h2>Полезная информация</h2></div>
+            <div class="owl-carousel" id="carouselImpLink">
+                {% for implink in implinks %}
+                    <div class="item">
+                        <a target="_blank" href="{{ implink.link }}">
+                            <div class="card">
+                              <div class="view overlay p-2">
+                                <img class="card-img-top" src="{{ implink.image_title.url }}"
+                                  alt="Card image cap">
+                                  <div class="mask rgba-white-slight"></div>
+                              </div>
+                              <div class="p-2">
+                                <h7 class="card-title">{{ implink.content }}</h7>
+                                  <hr>
+                                  <div class="text-right">
+                                        <a class="btn-floating btn-sm btn-secondary"><i class="fas fa-share"></i></a>
+                                  </div>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+        <!-- Card Narrower -->
+        </div>
+    </div>
+</div>
+

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat Alternates', sans-serif !important;
+    font-family: 'Podkova', serif !important;
 }
 a {
     color: #2bbbad;
@@ -60,7 +60,7 @@ a {
 }
 
 .news-area {
-    background-color: lightcyan;
+    background-color: #F2F2F2;
 }
 .news-area .btn-more{
     font-size: 50px;
