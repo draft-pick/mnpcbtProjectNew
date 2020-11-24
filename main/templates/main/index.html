@@ -11,7 +11,7 @@
 
           <!--Video source-->
           <video class="video-intro" autoplay loop muted>
-            <source src="http://ereg.mnpcbt.ru/another/film_main_page2.mp4" type="video/mp4" />
+            <source src="/media/video_main.mp4" type="video/mp4" />
           </video>
 
           <!-- Mask & flexbox options-->
@@ -189,7 +189,10 @@
             {% for i in news %}
                  <div class="col-12 col-lg-3 mb-4">
                     <div class="card testimonial-card">
-                      <div class="card-up winter-neva-gradient lighten-1"></div>
+                    <a href="{{ i.get_absolute_url }}">
+                      <div class="card-up winter-neva-gradient lighten-1">
+                          <p class="mdb-color text-white p-1">{{ i.created_at|date:"d E Y" }}</p>
+                      </div>
                           <div class="avatar mx-auto white">
                               {% if i.image_title %}
                                   <img src="{{ i.image_title.url }}" alt="">
@@ -201,8 +204,9 @@
                         <!-- Name -->
                         <h5 class="card-title">{{ i.title }}</h5>
                         <hr>
-                          <button type="button" class="btn btn-danger btn-rounded">{{ i.created_at|date:"d E Y" }}</button>
+
                       </div>
+                    </a>
                     </div>
                  </div>
             {% endfor %}
