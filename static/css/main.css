@@ -25,7 +25,20 @@ a {
     line-height: 1.5;
     border-radius: .3rem;
 }
-
+@media screen and (max-width: 768px) {
+    .btn-xl {
+        font-size: 1.5rem;
+        padding: .2rem;
+    }
+    .card hr {
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+    }
+    .card h4 {
+        font-size: .8rem;
+        margin-bottom: 0;
+    }
+}
 /*MAIN MENU AREA*/
 .left-mm {
     background-color: rgba(0,0,0,.4);
@@ -57,6 +70,19 @@ a {
     border: 10px solid #fff;
     border-radius: 0;
 }
+@media screen and (max-width: 768px) {
+    .testimonial-card .avatar {
+        width: 120px;
+        margin-top: 0;
+    }
+    .testimonial-card h5 {
+        font-size: 12px;
+    }
+    .testimonial-card .card-body {
+        padding: 0;
+    }
+}
+
 
 .breadcrumb-item + .breadcrumb-item::before {
     content: "|";
