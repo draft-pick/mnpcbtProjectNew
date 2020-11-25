@@ -99,7 +99,7 @@
 
   </div>
 <div class="row ml-0 mr-0 mt--100">
-    <div class="col-12 col-md-3 z-index-norm">
+    <div class="col-12 col-md-3 z-index-norm mb-3 mb-lg-0">
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-mobile-alt pink-text btn-xl"></i>
             <hr>
@@ -115,7 +115,7 @@
             8-499-785-20-82
         </div>
     </div>
-    <div class="col-12 col-md-3 z-index-norm">
+    <div class="col-6 col-md-3 z-index-norm mb-3 mb-lg-0">
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-map-pin pink-text btn-xl"></i>
             <hr>
@@ -123,7 +123,7 @@
             г. Москва, ул. Стромынка, д. 10
         </div>
     </div>
-   <div class="col-12 col-md-3 z-index-norm">
+   <div class="col-6 col-md-3 z-index-norm mb-3 mb-lg-0">
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-clock pink-text btn-xl"></i>
             <hr>
@@ -131,7 +131,7 @@
             Круглосуточно (Стационар)
         </div>
     </div>
-   <div class="col-12 col-md-3 z-index-norm">
+   <div class="col-12 col-md-3 z-index-norm mb-3 mb-lg-0">
         <div class="card shadow-sm p-3 text-center">
             <i class="fas fa-exclamation pink-text btn-xl"></i>
             <hr>
@@ -190,9 +190,11 @@
                  <div class="col-12 col-lg-3 mb-4">
                     <div class="card testimonial-card">
                     <a href="{{ i.get_absolute_url }}">
-                      <div class="card-up winter-neva-gradient lighten-1">
-                          <p class="mdb-color text-white p-1">{{ i.created_at|date:"d E Y" }}</p>
+                      <div class="card-up winter-neva-gradient lighten-1 d-none d-lg-block">
+
                       </div>
+
+
                           <div class="avatar mx-auto white">
                               {% if i.image_title %}
                                   <img src="{{ i.image_title.url }}" alt="">
@@ -202,9 +204,8 @@
                           </div>
                       <div class="card-body">
                         <!-- Name -->
-                        <h5 class="card-title">{{ i.title }}</h5>
-                        <hr>
-
+                        <h5 class="card-title px-2">{{ i.title }}</h5>
+                        <div class="mdb-color text-white">{{ i.created_at|date:"d E Y" }}</div>
                       </div>
                     </a>
                     </div>
