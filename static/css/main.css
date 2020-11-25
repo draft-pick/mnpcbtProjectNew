@@ -4,6 +4,9 @@ body {
 a {
     color: #2bbbad;
 }
+.text-sea-color{
+    color: #2bbbad;
+}
 .mt--100 {
     margin-top: -150px;
 }
@@ -64,4 +67,7 @@ a {
 }
 .news-area .btn-more{
     font-size: 50px;
+}
+.news-area a {
+    color: #45526e !important;
 }

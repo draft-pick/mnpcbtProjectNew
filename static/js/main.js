@@ -172,8 +172,8 @@ $().ready(function() {
   $('.story').truncate({
     length: 20,
     minTrail: 10,
-    moreText: 'Подробнее',
+    moreText: 'Читать полностью',
     lessText: 'Скрыть',
-    ellipsisText: "[...]"
+    ellipsisText: "..."
   });
 });

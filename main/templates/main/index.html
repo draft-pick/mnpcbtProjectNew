@@ -218,26 +218,6 @@
     </div>
     </div>
 </div>
-<div class="reviews-area">
-<div class="text-center"><h2>Отзывы о нашей работе</h2></div>
-    <div class="owl-carousel px-lg-5" id="carouselReviews">
-        {% for r in reviews %}
-             <div class="item">
-                    <!-- Card -->
-                        <div class="card card-cascade wider">
-                          <div class="view view-cascade gradient-card-header tempting-azure-gradient">
-                            <h2 class="card-header-title mb-3">{{ r.name }}</h2>
-                            <p class="mb-0"><i class="fas fa-calendar mr-2"></i>{{ r.date }}</p>
-                          </div>
-                          <div class="card-body card-body-cascade text-center story">
-                            <p class="card-text">{{ r.content }}</p>
-                          </div>
-                        </div>
-                        <!-- Card -->
-             </div>
-        {% endfor %}
-    </div>
-</div>
 <div class="implink-area">
     <div class="container">
         <div class="text-center"><h2>Полезная информация</h2></div>
@@ -266,4 +246,29 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="reviews-area">
+    <div class="text-center"><h2>Отзывы о нашей работе</h2></div>
+        <section class="my-5">
+        {% for r in reviews %}
+                    <!-- Card header -->
+                    <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
+                      <p class="mr-4 mb-0 text-sea-color"><i class="fas fa-calendar mr-2"></i>{{ r.date }}</p>
+                    </div>
 
+                    <div class="media mt-4 px-1 text-md-left">
+                      <img class="card-img-100 d-flex z-depth-1 mr-3" src="/media/user.png">
+                      <div class="media-body">
+                        <h5 class="font-weight-bold mt-0">
+                          <div class="text-sea-color">{{ r.name }}</div>
+                        </h5>
+                        <div class="story">
+                            {{ r.content }}
+                        </div>
+                      </div>
+                    </div>
+            <hr>
+        {% endfor %}
+        </section>
+    </div>
+</div>
