@@ -1,15 +1,20 @@
 {% extends 'inc/_containerPage.html' %}
  {% block contentPage %}
      {% if news_item.image_title %}
-        <img src="{{ news_item.image_title.url }}" alt="">
+         <img style="max-width: 400px" src="{{ news_item.image_title.url }}" class="rounded mx-auto d-block">
      {% endif %}
-    {{ news_item.content }}
+    {{ news_item.content|safe }}
     {{ news_item.created_at|date:"d E Y" }}
 
      <hr>
-     {% for images in images_gallery %}
-         {% if images.image %}
-         <img src="{{ images.image.url }}" alt="">
-         {% endif %}
-     {% endfor %}
+
+     <div class="owl-carousel" id="carouselNews">
+         {% for images in images_gallery %}
+             <div class="item">
+             {% if images.image %}
+             <img src="{{ images.image.url }}" alt="">
+             {% endif %}
+             </div>
+         {% endfor %}
+     </div>
 {% endblock %}
