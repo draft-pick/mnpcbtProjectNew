@@ -81,13 +81,13 @@ a {
     .testimonial-card .card-body {
         padding: 0;
     }
+    .title-area h1{
+        font-size: 22px;
+    }
 }
-
-
 .breadcrumb-item + .breadcrumb-item::before {
     content: "|";
 }
-
 .news-area {
     background-color: #F2F2F2;
 }
@@ -96,8 +96,4 @@ a {
 }
 .news-area a {
     color: #45526e !important;
-}
-
-.news_item-area a{
-    color: #a6c;
 }

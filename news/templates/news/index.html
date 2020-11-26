@@ -1,9 +1,9 @@
 {% extends 'inc/_containerPage.html' %}
 {% block contentPage %}
-    <div class="container mt-5 news_item-area">
+    <div class="container mt-5">
     {% for i in news %}
               <section class="dark-grey-text">
-                <div class="row align-items-center">
+                <div class="row align-items-center text-justify">
                   <div class="col-lg-5 col-xl-4">
                     <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 img-fluid">
                          {% if i.image_title %}

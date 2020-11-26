@@ -2,8 +2,8 @@
 {% load sitetree %}
     {% block content %}
         <div class="container">
-            <div class="mt-200">
-            <h1 class="text-center font-weight-bold text-info mb-3">{{ title }}</h1>
+            <div class="mt-200 title-area">
+            <h1 class="text-center font-weight-bold text-secondary mb-3">{{ title }}</h1>
                 {% sitetree_breadcrumbs from "mainMenu" template "sitetree/breadcrumbs_bootstrap4.html" %}
                 {% block contentPage %}
 
