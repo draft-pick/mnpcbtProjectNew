@@ -10,18 +10,18 @@
         <div class="view">
 
           <!--Video source-->
-          <video class="video-intro" playsinline webkit-playsinline autoplay muted loop>
-            <source src="http://ereg.mnpcbt.ru/another/videoplayback_1.mp4" type="video/mp4" />
+          <video class="video-intro" poster="http://ereg.mnpcbt.ru/another/img-main-video.jpg" playsinline webkit-playsinline autoplay muted loop>
+            <source src="http://ereg.mnpcbt.ru/another/videoplayback_4.mp4" type="video/mp4" />
           </video>
 
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
 
             <!-- Content -->
-              <div class="row mm-area">
+              <div class="row mm-area mx-2">
                   <div class="col-12 col-lg-4">
                       <div class="left-mm p-3">
-                            {% sitetree_menu from "leftMenu" include "trunk" template "sitetree/menu_bootstrap4.html"%}
+                            {% sitetree_menu from "leftMenu" include "trunk" template "sitetree/menu_bootstrap_navlist.html"%}
                       </div>
                   </div>
                   <div class="col-8 d-none d-lg-block align-self-center">

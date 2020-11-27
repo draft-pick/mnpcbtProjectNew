@@ -49,6 +49,29 @@ a {
 .left-mm a {
     color: #fff !important;
 }
+.left-mm .list-group-item {
+    background-color: rgba(0,0,0,0);
+}
+.left-mm .list-group-item p:nth-child(even):before {
+    content: '\f19d';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+    background: rgba(32,201,151,.4);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5%;
+    font-size: 20px;
+}
+.left-mm .list-group-item p:nth-child(odd):before {
+    content: '\f51c';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+    background: rgba(32,201,151,.4);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5%;
+    font-size: 20px;
+}
 @media screen and (max-width: 1500px) {
     .mm-area h2 {
         font-size: 22px;
@@ -96,4 +119,8 @@ a {
 }
 .news-area a {
     color: #45526e !important;
+}
+
+.md-form label {
+    color: #fff;
 }
