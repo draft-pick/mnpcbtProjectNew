@@ -27,6 +27,7 @@ urlpatterns = [
     path('reviews/', include('reviews.url')),
     path('implink/', include('implink.url')),
     path('moscowDoctor/', include('moscowDoctor.url')),
+    path('management/', include('management.url')),
     path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 

@@ -1,0 +1,48 @@
+{% extends 'inc/_containerPage.html' %}
+    {% block contentPage %}
+        <div class="row">
+        {% for man in management %}
+            {% if man.main_card == 1 %}
+                {% for main_man in main_management %}
+                        <div class="col-12">
+                        <div class="col-5 d-flex justify-content-center align-content-center">
+                            <div class="card testimonial-card">
+                              <div class="card-up bg-light lighten-1"></div>
+                              <div class="avatar mx-auto white">
+                                <img src="{{ main_man.image_title.url }}" class="rounded-circle" alt="">
+                              </div>
+                              <div class="card-body">
+                                <h4 class="card-title">{{ main_man.title }}</h4>
+                                <hr>
+                                <h5>{{ main_man.position }}</h5>
+                              </div>
+                            </div>
+                        </div>
+                        </div>
+                {% endfor %}
+            {% else %}
+                    <div class="owl-carousel" id="carouselNews">
+                        {% for m in management %}
+                            {% if m.main_card != 1 %}
+                                <div class="item">
+                                    <div class="card testimonial-card">
+                                          <div class="card-up bg-light lighten-1"></div>
+                                          <div class="avatar mx-auto white">
+                                            <img src="{{ m.image_title.url }}" class="rounded-circle"
+                                              alt="">
+                                          </div>
+                                          <div class="card-body">
+                                            <h4 class="card-title">{{ m.title }}</h4>
+                                            <hr>
+                                            <h5>{{ m.position }}</h5>
+                                          </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endblock %}

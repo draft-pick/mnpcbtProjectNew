@@ -130,28 +130,28 @@ a {
 .navbar .navbar-brand img {
     height: auto !important;
 }
-.testimonial-card .avatar {
-    width: 230px;
-    margin-top: -60px;
-    overflow: hidden;
-    border: 10px solid #fff;
-    border-radius: 0;
-}
-@media screen and (max-width: 768px) {
-    .testimonial-card .avatar {
-        width: 120px;
-        margin-top: 0;
-    }
-    .testimonial-card h5 {
-        font-size: 12px;
-    }
-    .testimonial-card .card-body {
-        padding: 0;
-    }
-    .title-area h1{
-        font-size: 22px;
-    }
-}
+/*.testimonial-card .avatar {*/
+/*    width: 230px;*/
+/*    margin-top: -60px;*/
+/*    overflow: hidden;*/
+/*    border: 10px solid #fff;*/
+/*    border-radius: 0;*/
+/*}*/
+/*@media screen and (max-width: 768px) {*/
+/*    .testimonial-card .avatar {*/
+/*        width: 120px;*/
+/*        margin-top: 0;*/
+/*    }*/
+/*    .testimonial-card h5 {*/
+/*        font-size: 12px;*/
+/*    }*/
+/*    .testimonial-card .card-body {*/
+/*        padding: 0;*/
+/*    }*/
+/*    .title-area h1{*/
+/*        font-size: 22px;*/
+/*    }*/
+/*}*/
 .breadcrumb-item + .breadcrumb-item::before {
     content: "|";
 }

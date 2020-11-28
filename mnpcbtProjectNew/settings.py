@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'reviews.apps.ReviewsConfig',
     'implink.apps.ImplinkConfig',
     'moscowDoctor.apps.MoscowdoctorConfig',
+    'management.apps.ManagementConfig',
 ]
 
 MIDDLEWARE = [
