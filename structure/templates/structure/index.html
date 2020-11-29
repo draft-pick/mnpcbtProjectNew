@@ -9,9 +9,9 @@
               <!-- Card image -->
               <div class="view view-cascade overlay">
                    {% if i.image_title %}
-                       <img src="{{ i.image_title.url }}" alt="">
+                       <img class="img-fluid" src="{{ i.image_title.url }}" alt="">
                    {% else %}
-                       <img src="/media/no_image.jpg" alt="">
+                       <img class="img-fluid" src="/media/no_image.jpg" alt="">
                    {% endif %}
               </div>
 
@@ -21,19 +21,15 @@
                 <!-- Title -->
                 <h4 class="card-title"><strong>{{ i.name }}</strong></h4>
                 <!-- Text -->
-                <p class="card-text">{{ i.address }}</p>
-                <p class="card-text">{{ i.phones }}</p>
+                <p class="card-text">{{ i.address|safe }}</p>
+                <p class="card-text">{{ i.phones|safe }}</p>
                 <p class="card-text">{{ i.email }}</p>
-                <!-- Linkedin -->
-                <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
-                <!-- Twitter -->
-                <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
-                <!-- Dribbble -->
-                <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
 
                 <!-- Card footer -->
                 <div class="card-footer text-muted text-center mt-4">
-                  {{ i.created_at }}
+                  <button type="button" class="btn btn-outline-default btn-rounded waves-effect">
+                      <a href="{{ i.get_absolute_url }}">Открыть</a>
+                  </button>
                 </div>
 
               </div>
