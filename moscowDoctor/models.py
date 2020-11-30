@@ -6,7 +6,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Doctors(models.Model):
     title = models.CharField(max_length=300, verbose_name='ФИО')
     position = models.CharField(max_length=500, verbose_name='Должность')
-    slogan = models.CharField(max_length=500, verbose_name='Слоган')
+    slogan = models.CharField(blank=True, max_length=500, verbose_name='Слоган')
     education = RichTextUploadingField(blank=True, verbose_name='Образование')
     working_activity = RichTextUploadingField(blank=True, verbose_name='Трудовая деятельность')
     additionally = RichTextUploadingField(blank=True, verbose_name='Дополнительные сведения о кандидате')

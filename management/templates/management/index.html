@@ -4,10 +4,11 @@
         {% for man in management %}
             {% if man.main_card == 1 %}
                 {% for main_man in main_management %}
-                        <div class="col-12">
-                        <div class="col-5 d-flex justify-content-center align-content-center">
+                        <div class="col-12 mb-3">
+                        <div class="d-flex justify-content-center">
+                        <div class="col-12 col-lg-5">
                             <div class="card testimonial-card">
-                              <div class="card-up bg-light lighten-1"></div>
+                              <div class="card-up bg-primary lighten-1"></div>
                               <div class="avatar mx-auto white">
                                 <img src="{{ main_man.image_title.url }}" class="rounded-circle" alt="">
                               </div>
@@ -19,14 +20,15 @@
                             </div>
                         </div>
                         </div>
+                        </div>
                 {% endfor %}
             {% else %}
-                    <div class="owl-carousel" id="carouselNews">
+                    <div class="owl-carousel mx-5 mx-lg-0" id="carouselManagement">
                         {% for m in management %}
                             {% if m.main_card != 1 %}
                                 <div class="item">
                                     <div class="card testimonial-card">
-                                          <div class="card-up bg-light lighten-1"></div>
+                                          <div class="card-up bg-info lighten-1"></div>
                                           <div class="avatar mx-auto white">
                                             <img src="{{ m.image_title.url }}" class="rounded-circle"
                                               alt="">

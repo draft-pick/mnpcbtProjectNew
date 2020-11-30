@@ -4,6 +4,7 @@
 {% for i in branches %}
      <div class="col-lg-4 col-md-12 mb-4">
             <!-- Card Wider -->
+         <a class="stretched-link" href="{{ i.get_absolute_url }}">
             <div class="card card-cascade wider">
 
               <!-- Card image -->
@@ -35,6 +36,7 @@
               </div>
 
             </div>
+         </a>
      </div>
 
 {% endfor %}

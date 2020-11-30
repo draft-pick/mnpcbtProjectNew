@@ -1,5 +1,6 @@
 {% extends 'inc/_containerPage.html' %}
  {% block contentPage %}
+
      {% if news_item.image_title %}
          <img style="max-width: 400px" src="{{ news_item.image_title.url }}" class="rounded mx-auto d-block">
      {% endif %}
@@ -17,4 +18,5 @@
              </div>
          {% endfor %}
      </div>
+
 {% endblock %}

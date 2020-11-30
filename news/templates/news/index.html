@@ -9,7 +9,7 @@
                          {% if i.image_title %}
                              <img class="card-img-top img-fluid" src="{{ i.image_title.url }}">
                          {% else %}
-                             <img src="/media/no_image.jpg" alt="">
+                             <img class="card-img-top img-fluid" src="/media/no_image.jpg" alt="">
                          {% endif %}
                       <a href="{{ i.get_absolute_url }}">
                         <div class="mask rgba-white-slight"></div>

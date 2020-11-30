@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'inc/_containerPage.html' %}
+    {% block contentPage %}
+        {% if doctor_item.image %}
+        <img class="float-right" src="{{ doctor_item.image.url }}" alt="">
+        {% else %}
+        <img width="300px" height="230px" class="float-right" src="/media/no_image.jpg" alt="">
+        {% endif %}
+        <h3>{{ doctor_item.position }}</h3>
 
-</body>
-</html>
+        <h2 class="font-italic my-4">{{ doctor_item.slogan }}</h2>
+
+        <h3>Образование:</h3>
+            {{ doctor_item.education|safe }}
+        <p></p>
+        <h3>Трудовая деятельность:</h3>
+            {{ doctor_item.working_activity|safe }}
+        <p></p>
+        <h3>Дополнительные сведения о кандидате:</h3>
+            {{ doctor_item.additionally|safe }}
+    {% endblock %}
