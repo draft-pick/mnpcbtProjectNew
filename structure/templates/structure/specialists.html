@@ -1,0 +1,32 @@
+{% extends 'inc/_widePage.html' %}
+    {% block contentPage %}
+        <div class="row">
+        {% for i in branches %}
+            <a href="{{ i.get_spec_url }}">
+            <div class="col-6 col-lg-4 mb-3">
+                    {% if i.image_title %}
+                        <div class="card card-image"
+                             style="background-image: url({{ i.image_title.url }});">
+                              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                                <div>
+                                  <h3 class="pink-text">{{ i.name }}</h3>
+                                  <a class="btn btn-pink"><i class="fas fa-folder-open"></i> Открыть</a>
+                                </div>
+                              </div>
+                        </div>
+                        {% else %}
+                        <div class="card card-image"
+                             style="background-image: url(/media/no_image.jpg);">
+                              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                                <div>
+                                  <h3 class="pink-text">{{ i.name }}</h3>
+                                  <a class="btn btn-pink"><i class="fas fa-folder-open"></i> Открыть</a>
+                                </div>
+                              </div>
+                        </div>
+                    {% endif %}
+            </div>
+            </a>
+        {% endfor %}
+        </div>
+    {% endblock %}

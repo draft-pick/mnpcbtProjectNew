@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load sitetree %}
+    {% block content %}
+            <div class="mx-4 mt-200 title-area">
+            <h1 class="text-secondary mb-3">{{ title }}</h1>
+                {% sitetree_breadcrumbs from "mainMenu" template "sitetree/breadcrumbs_bootstrap4.html" %}
+                {% block contentPage %}
+
+                {% endblock %}
+            </div>
+    {% endblock %}

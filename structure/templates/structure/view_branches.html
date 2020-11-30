@@ -16,17 +16,24 @@
 </ul>
 <div class="tab-content card pt-5" id="myTabContentMD">
   <div class="tab-pane fade show active" id="home-md" role="tabpanel" aria-labelledby="home-tab-md">
-      {{ image_map.im }}
     {{ branches_item.content|safe }}
   </div>
   <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
     <h4>Адрес:</h4><h5>{{ branches_item.address|safe }}</h5>
-    <h4>Телефон</h4><h5>{{ branches_item.phones|safe }}</h5>
-    <h4>Электронная почта</h4><h5>{{ branches_item.email|safe }}</h5>
-    <h4>Как добраться</h4><img src="{{ image_map.location_map.url }}" alt="">
+      <hr>
+    <h4>Телефон:</h4><h5>{{ branches_item.phones|safe }}</h5>
+      <hr>
+    <h4>Электронная почта:</h4><h5>{{ branches_item.email|safe }}</h5>
+      <hr>
+    <h4>Как добраться:</h4>
+      {% for im in image_map %}
+          <img class="img-fluid" src="{{ im.image.url }}" alt="">
+      {% endfor %}
   </div>
   <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
-    {{ image_map.count }}
+    <h3>Наши специалисты</h3>
+      <hr>
+    <h3>Лицензии</h3>
   </div>
 </div>
 
