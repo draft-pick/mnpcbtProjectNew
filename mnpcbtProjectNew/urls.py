@@ -28,6 +28,7 @@ urlpatterns = [
     path('implink/', include('implink.url')),
     path('moscowDoctor/', include('moscowDoctor.url')),
     path('management/', include('management.url')),
+    path('pages/', include('django.contrib.flatpages.urls')),
     path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
