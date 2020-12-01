@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'inc/_widePage.html' %}
+    {% block contentPage %}
+            <div class="card">
+                      <div class="card-body">
+                          <div class="table-responsive">
+                              <table class="table product-table">
+                                  <thead class="mdb-color lighten-5">
+                                      <tr>
+                                          <th>Фамилия</th>
+                                          <th>Имя</th>
+                                          <th>Отчество</th>
+                                          <th>Подразделение</th>
+                                          <th>Штатная должность</th>
+                                          <th>ВУЗ</th>
+                                          <th>Специальность</th>
+                                          <th>Сертификат</th>
+                                          <th>Категория</th>
+                                          <th>Степень</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                          {% for s in specialists %}
+                                      <tr>
+                                          <td>{{ s.surname }}</td>
+                                          <td>{{ s.name }}</td>
+                                          <td>{{ s.patronymic }}</td>
+                                          <td>{{ s.division }}</td>
+                                          <td>{{ s.job }}</td>
+                                          <td>{{ s.vyz }}</td>
+                                          <td>{{ s.profession }}</td>
+                                          <td>{{ s.sertif }}</td>
+                                          <td>{{ s.category }}</td>
+                                          <td>{{ s.degree }}</td>
+                                      </tr>
+                                          {% endfor %}
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+    {% endblock %}

@@ -15,7 +15,7 @@ class Branches(models.Model):
         return reverse('view_branch', kwargs={"branch_id": self.pk})
 
     def get_spec_url(self):
-        return reverse('view_branch', kwargs={"branch_id": self.pk})
+        return reverse('view_specialist', kwargs={"branch_id": self.pk})
 
     def __str__(self):
         return self.name
