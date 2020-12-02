@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'implink.apps.ImplinkConfig',
     'moscowDoctor.apps.MoscowdoctorConfig',
     'management.apps.ManagementConfig',
+    'regularPages.apps.RegularpagesConfig',
 ]
 
 MIDDLEWARE = [

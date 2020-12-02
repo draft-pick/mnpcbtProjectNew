@@ -1,0 +1,6 @@
+{% extends 'inc/_containerPage.html' %}
+{% block contentPage %}
+    {% for reg in regular %}
+        <a href="{{ reg.get_absolute_url }}">{{ reg.title }}</a>
+    {% endfor %}
+{% endblock %}

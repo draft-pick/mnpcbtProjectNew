@@ -29,6 +29,7 @@ urlpatterns = [
     path('moscowDoctor/', include('moscowDoctor.url')),
     path('management/', include('management.url')),
     path('pages/', include('django.contrib.flatpages.urls')),
+    path('regularPages/', include('regularPages.url')),
     path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 

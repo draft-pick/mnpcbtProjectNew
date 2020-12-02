@@ -54,10 +54,10 @@ $(document).ready(function() {
                 autoplayTimeout:5000, //Время смены слайда
                 responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
                     0:{
-                        items:1
+                        items:2
                     },
                     600:{
-                        items:2
+                        items:3
                     },
                     1000:{
                         items:5
