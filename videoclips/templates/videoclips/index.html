@@ -1,0 +1,21 @@
+{% extends 'inc/_containerPage.html' %}
+{% block contentPage %}
+    <div class="row">
+    {% for vc in videoclips %}
+        <div class="col-12 col-lg-6 mb-3">
+        <a href="{{ vc.get_absolute_url }}">
+            <div class="card card-image"
+              style="background-image: url({{ vc.image_title.url }});">
+              <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                <div>
+                  <h5 class="pink-text"><i class="fas fa-video"></i></h5>
+                  <h4 class="card-title pt-2"><strong>{{ vc.title }}</strong></h4>
+                  <a class="btn btn-pink"><i class="fas fa-share"></i> Посмотреть</a>
+                </div>
+              </div>
+            </div>
+        </a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

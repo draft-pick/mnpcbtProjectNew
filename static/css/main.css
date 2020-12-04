@@ -160,28 +160,7 @@ a {
 .navbar .navbar-brand img {
     height: auto !important;
 }
-/*.testimonial-card .avatar {*/
-/*    width: 230px;*/
-/*    margin-top: -60px;*/
-/*    overflow: hidden;*/
-/*    border: 10px solid #fff;*/
-/*    border-radius: 0;*/
-/*}*/
-/*@media screen and (max-width: 768px) {*/
-/*    .testimonial-card .avatar {*/
-/*        width: 120px;*/
-/*        margin-top: 0;*/
-/*    }*/
-/*    .testimonial-card h5 {*/
-/*        font-size: 12px;*/
-/*    }*/
-/*    .testimonial-card .card-body {*/
-/*        padding: 0;*/
-/*    }*/
-/*    .title-area h1{*/
-/*        font-size: 22px;*/
-/*    }*/
-/*}*/
+
 .breadcrumb-item + .breadcrumb-item::before {
     content: "|";
 }
@@ -198,4 +177,21 @@ a {
 
 .md-form label {
     color: #fff;
+}
+
+/*Youtube*/
+.thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.thumb-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
 }

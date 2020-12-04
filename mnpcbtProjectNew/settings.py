@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'moscowDoctor.apps.MoscowdoctorConfig',
     'management.apps.ManagementConfig',
     'regularPages.apps.RegularpagesConfig',
+    'needToKnow.apps.NeedtoknowConfig',
+    'videoclips.apps.VideoclipsConfig',
 ]
 
 MIDDLEWARE = [
