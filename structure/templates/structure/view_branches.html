@@ -19,12 +19,7 @@
     {{ branches_item.content|safe }}
   </div>
   <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
-    <h4>Адрес:</h4><h5>{{ branches_item.address|safe }}</h5>
-      <hr>
-    <h4>Телефон:</h4><h5>{{ branches_item.phones|safe }}</h5>
-      <hr>
-    <h4>Электронная почта:</h4><h5>{{ branches_item.email|safe }}</h5>
-      <hr>
+    {{ branches_item.contacts|safe }}
     <h4>Как добраться:</h4>
       {% for im in image_map %}
           <img class="img-fluid" src="{{ im.image.url }}" alt="">

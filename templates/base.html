@@ -79,6 +79,26 @@
 
 {% endblock %}
 
+<footer class="page-footer font-small teal pt-4">
+  <div class="container text-center text-md-left">
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <h5 class="text-right">
+            {% sitetree_menu from "leftMenu" include "trunk" template "sitetree/menu_bootstrap4.html"%}
+        </h5>
+      </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+      <div class="col-md-6 mb-md-0 mb-3">
+        <h5 class="text-left">
+            {% sitetree_menu from "mainMenu" include "this-ancestor-children" template "sitetree/menu_bootstrap4.html" %}
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright text-center py-3">© 2020 Все права защищены:
+    <a href="#"> Отдел информационных технологий</a>
+  </div>
+</footer>
 
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

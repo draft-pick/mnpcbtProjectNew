@@ -22,9 +22,7 @@
                 <!-- Title -->
                 <h4 class="card-title"><strong>{{ i.name }}</strong></h4>
                 <!-- Text -->
-                <p class="card-text">{{ i.address|safe }}</p>
-                <p class="card-text">{{ i.phones|safe }}</p>
-                <p class="card-text">{{ i.email }}</p>
+                <div class="text-left">{{ i.contacts|safe }}</div>
 
                 <!-- Card footer -->
                 <div class="card-footer text-muted text-center mt-4">

@@ -7,7 +7,7 @@ from implink.models import ImpLink
 
 
 def index(request):
-    news = News.objects.order_by("-id")[0:4]
+    news = News.objects.order_by("-id")[0:6]
     branches = Branches.objects.all()
     image_branches = Branches.objects.all()
     reviews = Reviews.objects.all()

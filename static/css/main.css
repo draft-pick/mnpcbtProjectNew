@@ -4,6 +4,9 @@ body {
 a {
     color: #2bbbad;
 }
+strong {
+    font-weight: 700;
+}
 .text-sea-color{
     color: #2bbbad;
 }

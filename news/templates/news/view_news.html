@@ -1,14 +1,10 @@
 {% extends 'inc/_containerPage.html' %}
  {% block contentPage %}
-
      {% if news_item.image_title %}
          <img style="max-width: 400px" src="{{ news_item.image_title.url }}" class="rounded mx-auto d-block">
      {% endif %}
     {{ news_item.content|safe }}
-    {{ news_item.created_at|date:"d E Y" }}
-
      <hr>
-
      <div class="owl-carousel" id="carouselNews">
          {% for images in images_gallery %}
              <div class="item">
@@ -18,5 +14,7 @@
              </div>
          {% endfor %}
      </div>
-
+     <div class="text-right">
+        <button type="button" class="btn btn-info btn-rounded">{{ news_item.created_at|date:"d E Y" }}</button>
+     </div>
 {% endblock %}

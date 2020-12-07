@@ -5,9 +5,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 class Branches(models.Model):
     name = models.CharField(max_length=250, verbose_name='Наименование')
-    address = RichTextUploadingField(blank=True, verbose_name='Адрес')
-    phones = RichTextUploadingField(verbose_name='Телефоны')
-    email = models.EmailField(verbose_name='E-mail')
+    contacts = RichTextUploadingField(blank=True, verbose_name='Контактная информация')
     content = RichTextUploadingField(blank=True, verbose_name='Контент')
     image_title = models.ImageField(upload_to='branches/', verbose_name='Фото заголовка', blank=True)
 
